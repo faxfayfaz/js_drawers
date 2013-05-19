@@ -1,0 +1,126 @@
+body {
+  font-family: Helvetica, sans-serif;
+  background-image: url(binding_light.png); }
+
+#main {
+  width: 900px;
+  height: 400px;
+  margin: 0 auto; }
+
+.split {
+  width: 50%;
+  height: 100%;
+  float: left; }
+
+.trigger, .trigger2 {
+  width: 80px;
+  height: 20px;
+  margin: 50px auto;
+  padding: 10px 0 6px;
+  color: #fff;
+  text-shadow: 0 -1px 0 #555;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  background-color: #0a64a4;
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 84%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.73)), color-stop(84%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 84%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 84%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 84%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 84%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#baffffff', endColorstr='#00ffffff',GradientType=0 );
+  /* IE6-9 */
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5); }
+  .trigger:hover, .trigger2:hover {
+    background-color: #0d81d4; }
+  .trigger:active, .trigger2:active {
+    border-color: #777;
+    font-size: 0.98em;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 84%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.73)), color-stop(84%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 84%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 84%, rgba(255, 255, 255, 0) 100%);
+    /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 84%, rgba(255, 255, 255, 0) 100%);
+    /* IE10+ */
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.73) 0%, rgba(255, 255, 255, 0) 84%, rgba(255, 255, 255, 0) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#baffffff', endColorstr='#00ffffff',GradientType=0 );
+    /* IE6-9 */
+    box-shadow: inset 0 0 7px 3px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.5); }
+
+.box {
+  width: 400px;
+  margin: 50px auto 100px;
+  overflow-x: visible;
+  overflow-y: hidden; }
+
+.expanded > .inner {
+  display: block; }
+.expanded > .inner-top {
+  display: block; }
+.expanded > .inner-bottom {
+  display: block; }
+
+.inner {
+  display: none;
+  position: relative;
+  width: 80%;
+  height: 0px;
+  margin: 0px auto;
+  z-index: 1;
+  background-image: url(bo_play_pattern.png);
+  box-shadow: inset 0 0 15px 6px black, 6px 0 12px -3px rgba(0, 0, 0, 0.6), -6px 0 12px -3px rgba(0, 0, 0, 0.6); }
+  .inner > .inner-text {
+    width: 65%;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+    top: 35px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    letter-spacing: 2px; }
+
+.inner-top {
+  display: none;
+  position: relative;
+  width: 90%;
+  height: 0px;
+  margin: 0px auto;
+  z-index: 2;
+  box-shadow: 0 -7px 15px 8px #000; }
+
+.inner-bottom {
+  display: none;
+  position: relative;
+  width: 90%;
+  height: 0px;
+  margin: 0px auto;
+  z-index: 3;
+  box-shadow: 0 7px 15px 8px #000; }
+
+.fixed {
+  position: relative; }
+  .fixed > .inner {
+    position: absolute;
+    left: 40px;
+    bottom: 0px;
+    height: 200px; }
+  .fixed > .inner-bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 20px; }
